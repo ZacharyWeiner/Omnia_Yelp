@@ -15361,3 +15361,1432 @@ Processing by RestaurantsController#index as HTML
   Rendered layouts/_navbar.html.erb (0.3ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-05-23 17:09:50 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:09:50 -0400
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:09:51 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC  [["restaurant_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (111.2ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 154ms (Views: 152.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:11:14 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  Rendered restaurants/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 8ms
+
+SyntaxError (/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:27: syntax error, unexpected '>'
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+        frameborder="0" style="border:0"
+                             ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:33: syntax error, unexpected '<'
+      </iframe>
+       ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:40: unknown regexp options - dv
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:41: syntax error, unexpected '<'
+  <div class="col-md-9">
+   ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_super, expecting keyword_do or '{' or '('
+...afe_append='      <h2> Be super awesome, and write the first...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_and
+...     <h2> Be super awesome, and write the first review ! </h...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:43: syntax error, unexpected '<'
+... and write the first review ! </h2>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: unknown regexp options - th
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+...<tr><th class="col-md-3"></th><th class="col-md-9"></th></tr...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+...-3"></th><th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: unknown regexp options - tr
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+...th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:51: unknown regexp option - h
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:51: syntax error, unexpected tINTEGER, expecting keyword_end
+...output_buffer.safe_append='</h4>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:53: unknown regexp options - td
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+              <td>
+               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...  <div class="star-rating" data-score='.freeze;@output_buffe...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected '<'
+...@output_buffer.safe_append=' ></div>
+...                               ^
+end pattern with unmatched parenthesis: /div>
+                <p>'.freeze;@output_buffer.append=( h(r.comment).gsub(/
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:56: syntax error, unexpected $undefined, expecting keyword_end
+...r.append=( h(r.comment).gsub(/\n/, '<br/>').html_safe );@out...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:56: syntax error, unexpected ')', expecting keyword_end
+...(r.comment).gsub(/\n/, '<br/>').html_safe );@output_buffer.s...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:68: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze;     end 
+                 ^):
+  app/views/restaurants/show.html.erb:27: syntax error, unexpected '>'
+  app/views/restaurants/show.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:33: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:40: unknown regexp options - dv
+  app/views/restaurants/show.html.erb:41: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_super, expecting keyword_do or '{' or '('
+  app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_and
+  app/views/restaurants/show.html.erb:43: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:46: unknown regexp options - th
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:46: unknown regexp options - tr
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:51: unknown regexp option - h
+  app/views/restaurants/show.html.erb:51: syntax error, unexpected tINTEGER, expecting keyword_end
+  app/views/restaurants/show.html.erb:53: unknown regexp options - td
+  app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:56: syntax error, unexpected $undefined, expecting keyword_end
+  app/views/restaurants/show.html.erb:56: syntax error, unexpected ')', expecting keyword_end
+  app/views/restaurants/show.html.erb:68: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.5ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (50.6ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (117.7ms)
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:11:29 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  Rendered restaurants/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 8ms
+
+SyntaxError (/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:27: syntax error, unexpected '>'
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+        frameborder="0" style="border:0"
+                             ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:33: syntax error, unexpected '<'
+      </iframe>
+       ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:40: unknown regexp options - dv
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:41: syntax error, unexpected '<'
+  <div class="col-md-9">
+   ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_super, expecting keyword_do or '{' or '('
+...afe_append='      <h2> Be super awesome, and write the first...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_and
+...     <h2> Be super awesome, and write the first review ! </h...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:43: syntax error, unexpected '<'
+... and write the first review ! </h2>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: unknown regexp options - th
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+...<tr><th class="col-md-3"></th><th class="col-md-9"></th></tr...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+...-3"></th><th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: unknown regexp options - tr
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+...th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:51: unknown regexp option - h
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:51: syntax error, unexpected tINTEGER, expecting keyword_end
+...output_buffer.safe_append='</h4>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:53: unknown regexp options - td
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+              <td>
+               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...  <div class="star-rating" data-score='.freeze;@output_buffe...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected '<'
+...@output_buffer.safe_append=' ></div>
+...                               ^
+end pattern with unmatched parenthesis: /div>
+                <p>'.freeze;@output_buffer.append=( h(r.comment).gsub(/
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:56: syntax error, unexpected $undefined, expecting keyword_end
+...r.append=( h(r.comment).gsub(/\n/, '<br/>').html_safe );@out...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:56: syntax error, unexpected ')', expecting keyword_end
+...(r.comment).gsub(/\n/, '<br/>').html_safe );@output_buffer.s...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:68: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze;     end 
+                 ^):
+  app/views/restaurants/show.html.erb:27: syntax error, unexpected '>'
+  app/views/restaurants/show.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:33: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:40: unknown regexp options - dv
+  app/views/restaurants/show.html.erb:41: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_super, expecting keyword_do or '{' or '('
+  app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_and
+  app/views/restaurants/show.html.erb:43: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:46: unknown regexp options - th
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:46: unknown regexp options - tr
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:51: unknown regexp option - h
+  app/views/restaurants/show.html.erb:51: syntax error, unexpected tINTEGER, expecting keyword_end
+  app/views/restaurants/show.html.erb:53: unknown regexp options - td
+  app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:56: syntax error, unexpected $undefined, expecting keyword_end
+  app/views/restaurants/show.html.erb:56: syntax error, unexpected ')', expecting keyword_end
+  app/views/restaurants/show.html.erb:68: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.1ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (49.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (107.6ms)
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:12:00 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  Rendered restaurants/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:27: syntax error, unexpected '>'
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+        frameborder="0" style="border:0"
+                             ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:33: syntax error, unexpected '<'
+      </iframe>
+       ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:40: unknown regexp options - dv
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:41: syntax error, unexpected '<'
+  <div class="col-md-9">
+   ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_super, expecting keyword_do or '{' or '('
+...afe_append='      <h2> Be super awesome, and write the first...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_and
+...     <h2> Be super awesome, and write the first review ! </h...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:43: syntax error, unexpected '<'
+... and write the first review ! </h2>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: unknown regexp options - th
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+...<tr><th class="col-md-3"></th><th class="col-md-9"></th></tr...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+...-3"></th><th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: unknown regexp options - tr
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+...th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:51: unknown regexp option - h
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:51: syntax error, unexpected tINTEGER, expecting keyword_end
+...output_buffer.safe_append='</h4>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:53: unknown regexp options - td
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+              <td>
+               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...  <div class="star-rating" data-score='.freeze;@output_buffe...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected '<'
+...@output_buffer.safe_append=' ></div>
+...                               ^
+end pattern with unmatched parenthesis: /div>
+                <p>'.freeze;@output_buffer.append=( h(r.comment).gsub(/
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:56: syntax error, unexpected $undefined, expecting keyword_end
+...r.append=( h(r.comment).gsub(/\n/, '<br/>').html_safe );@out...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:56: syntax error, unexpected ')', expecting keyword_end
+...(r.comment).gsub(/\n/, '<br/>').html_safe );@output_buffer.s...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:68: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze;     end 
+                 ^):
+  app/views/restaurants/show.html.erb:27: syntax error, unexpected '>'
+  app/views/restaurants/show.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:33: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:40: unknown regexp options - dv
+  app/views/restaurants/show.html.erb:41: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_super, expecting keyword_do or '{' or '('
+  app/views/restaurants/show.html.erb:43: syntax error, unexpected keyword_and
+  app/views/restaurants/show.html.erb:43: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:46: unknown regexp options - th
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:46: unknown regexp options - tr
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:51: unknown regexp option - h
+  app/views/restaurants/show.html.erb:51: syntax error, unexpected tINTEGER, expecting keyword_end
+  app/views/restaurants/show.html.erb:53: unknown regexp options - td
+  app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:56: syntax error, unexpected $undefined, expecting keyword_end
+  app/views/restaurants/show.html.erb:56: syntax error, unexpected ')', expecting keyword_end
+  app/views/restaurants/show.html.erb:68: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (50.9ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (113.0ms)
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:13:02 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  Rendered restaurants/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:27: syntax error, unexpected '<'
+...#{ENV['google_api_key']} &q=#{<%= @restaurant.address.parame...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:82: syntax error, unexpected keyword_ensure, expecting tSTRING_DEND
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:84: syntax error, unexpected keyword_end, expecting tSTRING_DEND):
+  app/views/restaurants/show.html.erb:27: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:82: syntax error, unexpected keyword_ensure, expecting tSTRING_DEND
+  app/views/restaurants/show.html.erb:84: syntax error, unexpected keyword_end, expecting tSTRING_DEND
+
+
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.1ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (47.1ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (105.1ms)
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:13:42 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  Rendered restaurants/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 8ms
+
+SyntaxError (/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:29: syntax error, unexpected tINTEGER, expecting keyword_end
+        width="600"
+                  ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:30: syntax error, unexpected tINTEGER, expecting keyword_end
+        height="450"
+                   ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:31: syntax error, unexpected tINTEGER, expecting keyword_end
+        frameborder="0" style="border:0"
+                      ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+        frameborder="0" style="border:0"
+                                     ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...path(@restaurant),  class: "btn btn-link" );@output_buffer.s...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:36: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...aurant),  class: "btn btn-link" );@output_buffer.safe_append...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+... restaurants_path,  class: "btn btn-link" );@output_buffer.s...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:38: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...ts_path,  class: "btn btn-link" );@output_buffer.safe_append...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  <div class="col-md-9">
+                 ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  <div class="col-md-9">
+                       ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:45: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+@output_buffer.safe_append='      <table class="table">
+                                                     ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...      <thead><tr><th class="col-md-3"></th><th class="col-md...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+...<thead><tr><th class="col-md-3"></th><th class="col-md-9"></...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...="col-md-3"></th><th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:46: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+...md-3"></th><th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:52: syntax error, unexpected '<', expecting keyword_end
+                <p>  '.freeze;@output_buffer.a...
+                 ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:53: unknown regexp options - td
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+              <td>
+               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...  <div class="star-rating" data-score='.freeze;@output_buffe...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected '<'
+...@output_buffer.safe_append=' ></div>
+...                               ^
+end pattern with unmatched parenthesis: /div>
+                <p>'.freeze;@output_buffer.append=( h(r.comment).gsub(/
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:56: syntax error, unexpected $undefined, expecting keyword_end
+...r.append=( h(r.comment).gsub(/\n/, '<br/>').html_safe );@out...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:56: syntax error, unexpected ')', expecting keyword_end
+...(r.comment).gsub(/\n/, '<br/>').html_safe );@output_buffer.s...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:68: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze;     end 
+                 ^):
+  app/views/restaurants/show.html.erb:29: syntax error, unexpected tINTEGER, expecting keyword_end
+  app/views/restaurants/show.html.erb:30: syntax error, unexpected tINTEGER, expecting keyword_end
+  app/views/restaurants/show.html.erb:31: syntax error, unexpected tINTEGER, expecting keyword_end
+  app/views/restaurants/show.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:36: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/restaurants/show.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:38: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/restaurants/show.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  app/views/restaurants/show.html.erb:45: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:46: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  app/views/restaurants/show.html.erb:52: syntax error, unexpected '<', expecting keyword_end
+  app/views/restaurants/show.html.erb:53: unknown regexp options - td
+  app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:56: syntax error, unexpected $undefined, expecting keyword_end
+  app/views/restaurants/show.html.erb:56: syntax error, unexpected ')', expecting keyword_end
+  app/views/restaurants/show.html.erb:68: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.9ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (51.0ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (112.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 17:14:56 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:15:00 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  Rendered restaurants/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 8ms
+
+SyntaxError (/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:31: syntax error, unexpected tSTRING_DEND, expecting ')'
+...estaurant.address.parameterize}" );@output_buffer.safe_appen...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:32: syntax error, unexpected '<'
+      </iframe>
+       ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:39: unknown regexp options - dv
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:40: syntax error, unexpected '<'
+  <div class="col-md-9">
+   ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:42: syntax error, unexpected keyword_super, expecting keyword_do or '{' or '('
+...afe_append='      <h2> Be super awesome, and write the first...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:42: syntax error, unexpected keyword_and
+...     <h2> Be super awesome, and write the first review ! </h...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:42: syntax error, unexpected '<'
+... and write the first review ! </h2>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:45: unknown regexp options - th
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+...<tr><th class="col-md-3"></th><th class="col-md-9"></th></tr...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+...-3"></th><th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:45: unknown regexp options - tr
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+...th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:50: unknown regexp option - h
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:50: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h4>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:52: unknown regexp options - td
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:53: syntax error, unexpected '<'
+              <td>
+               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+...  <div class="star-rating" data-score='.freeze;@output_buffe...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+...@output_buffer.safe_append=' ></div>
+...                               ^
+end pattern with unmatched parenthesis: /div>
+                <p>'.freeze;@output_buffer.append=( h(r.comment).gsub(/
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected $undefined, expecting ')'
+...r.append=( h(r.comment).gsub(/\n/, '<br/>').html_safe );@out...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected ')', expecting keyword_end
+...gsub(/\n/, '<br/>').html_safe );@output_buffer.safe_append='...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:67: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze;     end 
+                 ^):
+  app/views/restaurants/show.html.erb:31: syntax error, unexpected tSTRING_DEND, expecting ')'
+  app/views/restaurants/show.html.erb:32: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:39: unknown regexp options - dv
+  app/views/restaurants/show.html.erb:40: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:42: syntax error, unexpected keyword_super, expecting keyword_do or '{' or '('
+  app/views/restaurants/show.html.erb:42: syntax error, unexpected keyword_and
+  app/views/restaurants/show.html.erb:42: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:45: unknown regexp options - th
+  app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:45: unknown regexp options - tr
+  app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:50: unknown regexp option - h
+  app/views/restaurants/show.html.erb:50: syntax error, unexpected tINTEGER, expecting ')'
+  app/views/restaurants/show.html.erb:52: unknown regexp options - td
+  app/views/restaurants/show.html.erb:53: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected $undefined, expecting ')'
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected ')', expecting keyword_end
+  app/views/restaurants/show.html.erb:67: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.5ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (43.6ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (101.7ms)
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:15:00 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  Rendered restaurants/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:31: syntax error, unexpected tSTRING_DEND, expecting ')'
+...estaurant.address.parameterize}" );@output_buffer.safe_appen...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:32: syntax error, unexpected '<'
+      </iframe>
+       ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:39: unknown regexp options - dv
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:40: syntax error, unexpected '<'
+  <div class="col-md-9">
+   ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:42: syntax error, unexpected keyword_super, expecting keyword_do or '{' or '('
+...afe_append='      <h2> Be super awesome, and write the first...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:42: syntax error, unexpected keyword_and
+...     <h2> Be super awesome, and write the first review ! </h...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:42: syntax error, unexpected '<'
+... and write the first review ! </h2>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:45: unknown regexp options - th
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+...<tr><th class="col-md-3"></th><th class="col-md-9"></th></tr...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+...-3"></th><th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:45: unknown regexp options - tr
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+...th class="col-md-9"></th></tr></thead>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:50: unknown regexp option - h
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:50: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h4>
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:52: unknown regexp options - td
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:53: syntax error, unexpected '<'
+              <td>
+               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+...  <div class="star-rating" data-score='.freeze;@output_buffe...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+...@output_buffer.safe_append=' ></div>
+...                               ^
+end pattern with unmatched parenthesis: /div>
+                <p>'.freeze;@output_buffer.append=( h(r.comment).gsub(/
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected $undefined, expecting ')'
+...r.append=( h(r.comment).gsub(/\n/, '<br/>').html_safe );@out...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:55: syntax error, unexpected ')', expecting keyword_end
+...gsub(/\n/, '<br/>').html_safe );@output_buffer.safe_append='...
+...                               ^
+/Users/Zack/Desktop/Demos/ruby/udemy/one_stop_ruby_on_rails/Omnia_Yelp/app/views/restaurants/show.html.erb:67: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze;     end 
+                 ^):
+  app/views/restaurants/show.html.erb:31: syntax error, unexpected tSTRING_DEND, expecting ')'
+  app/views/restaurants/show.html.erb:32: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:39: unknown regexp options - dv
+  app/views/restaurants/show.html.erb:40: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:42: syntax error, unexpected keyword_super, expecting keyword_do or '{' or '('
+  app/views/restaurants/show.html.erb:42: syntax error, unexpected keyword_and
+  app/views/restaurants/show.html.erb:42: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:45: unknown regexp options - th
+  app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:45: unknown regexp options - tr
+  app/views/restaurants/show.html.erb:45: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:50: unknown regexp option - h
+  app/views/restaurants/show.html.erb:50: syntax error, unexpected tINTEGER, expecting ')'
+  app/views/restaurants/show.html.erb:52: unknown regexp options - td
+  app/views/restaurants/show.html.erb:53: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/restaurants/show.html.erb:54: syntax error, unexpected '<'
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected $undefined, expecting ')'
+  app/views/restaurants/show.html.erb:55: syntax error, unexpected ')', expecting keyword_end
+  app/views/restaurants/show.html.erb:67: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (48.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (101.9ms)
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:15:40 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:15:40 -0400
+
+
+Started GET "/" for ::1 at 2015-05-23 17:16:08 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:16:08 -0400
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:16:09 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC  [["restaurant_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:17:52 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:17:52 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:17:52 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:17:52 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:17:52 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:17:52 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:17:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:17:52 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:17:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:17:52 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:17:52 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:17:53 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:17:53 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:17:53 -0400
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:18:03 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC  [["restaurant_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:18:03 -0400
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:18:58 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:18:58 -0400
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:19:12 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC  [["restaurant_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:19:12 -0400
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:19:14 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:19:14 -0400
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:19:39 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC  [["restaurant_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:19:39 -0400
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:19:48 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:19:48 -0400
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:20:07 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC  [["restaurant_id", 1]]
+  Rendered restaurants/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `&' for "123-fake-street-nyc-ny-10001":String):
+    30:         width="230"
+    31:         height="230"
+    32:         frameborder="0" style="border:0"
+    33:         src= "https://www.google.com/maps/embed/v1/place?key=AIzaSyCPWcKLskhflXwbEAYsO9pQ5rtzwUv1SVY&q=<%= @restaurant.address.parameterize&zoom=14 %>" >
+    34:       </iframe>
+    35: 
+    36:     <% if user_signed_in?  && current_user.admin? %>
+  app/views/restaurants/show.html.erb:33:in `_app_views_restaurants_show_html_erb___621922554486504081_70324215864120'
+
+
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (54.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (112.3ms)
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:20:25 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC  [["restaurant_id", 1]]
+  Rendered restaurants/show.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `parameteriz' for "123 Fake Street, NYC NY, 10001":String):
+    30:         width="230"
+    31:         height="230"
+    32:         frameborder="0" style="border:0"
+    33:         src= "https://www.google.com/maps/embed/v1/place?key=AIzaSyCPWcKLskhflXwbEAYsO9pQ5rtzwUv1SVY&q=<%= @restaurant.address.parameteriz %>&zoom=14" >
+    34:       </iframe>
+    35: 
+    36:     <% if user_signed_in?  && current_user.admin? %>
+  app/views/restaurants/show.html.erb:33:in `_app_views_restaurants_show_html_erb___621922554486504081_70324270529220'
+
+
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.1ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (48.2ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zack/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (108.7ms)
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:20:48 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC  [["restaurant_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:20:48 -0400
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:21:03 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC[0m  [["restaurant_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:21:03 -0400
+
+
+Started GET "/restaurants/1" for ::1 at 2015-05-23 17:21:12 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?  ORDER BY reviews.created_at DESC  [["restaurant_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered restaurants/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 17:21:12 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 17:21:12 -0400

@@ -24,6 +24,15 @@
       <%= link_to("view website", @restaurant.website, class: "btn btn-link", :target => "_blank") %>
     </p>
     <%= link_to 'Write A Review', new_restaurant_review_path(@restaurant),  class: "btn btn-primary" %><br/>
+    <br/>
+    <% other_address = "123 Fake Street, NYC NY, 10001"%>
+    <iframe
+        width="230"
+        height="230"
+        frameborder="0" style="border:0"
+        src= "https://www.google.com/maps/embed/v1/place?key=AIzaSyCPWcKLskhflXwbEAYsO9pQ5rtzwUv1SVY&q=<%= @restaurant.address.parameterize %>&zoom=12" >
+      </iframe>
+
     <% if user_signed_in?  && current_user.admin? %>
       <%= link_to 'Edit', edit_restaurant_path(@restaurant),  class: "btn btn-link" %> | 
     <% end %>
