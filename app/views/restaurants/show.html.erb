@@ -20,7 +20,7 @@
 
     <p>
       <strong>Website:</strong>
-      <%= link_to("view website", @restaurant.website, class: "btn btn-link") %>
+      <%= link_to("view website", @restaurant.website, class: "btn btn-link", :target => "_blank") %>
     </p>
     <%= link_to 'Write A Review', new_restaurant_review_path(@restaurant),  class: "btn btn-primary" %><br/>
     <%= link_to 'Edit', edit_restaurant_path(@restaurant),  class: "btn btn-link" %> |
@@ -31,9 +31,20 @@
       <h2> Be super awesome, and write the first review ! </h2>
     <% else %>
       <% @reviews.each do |r| %>
-        <%= r.rating %>
+        <div class="star-rating" data-score=<%= r.rating %> ></div>
+        </div>
         <%= r.comment %>
       <% end %>
     <% end %>
   </div>
 </div>
+
+<script type="text/javascript">
+  $('.star-rating').raty({
+    path: 'https://s3.amazonaws.com/omniayelp/stars/',
+    readOnly: true,
+    score: function(){
+      return $(this).attr('data-score');
+    }
+  });
+</script>
