@@ -12689,3 +12689,107 @@ Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 15:20:12 -0400
   [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-05-23 15:26:02 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"H15pidcvi1iGTuS+hqWMJ91mGyX1/AaHXO7BwKEpHsdSadC6siJqMr8T8vL78WDHXJK21ReiVP1OxPirXXb6sQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 15:26:02 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-05-23 15:26:04 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-05-23 15:28:50 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-fa8d12656282b9a3aed27154b1a67d48686415222ea6d030c61ef6a640748669.css?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/scaffolds.self-c3796d44bf051c6f9492fbcbfbe5e8937eb9448a017415a6d04db81574d6d03b.css?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-23 15:28:50 -0400
+
+
+Started POST "/users" for ::1 at 2015-05-23 15:29:12 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gIlgTCfziXOIFeL4vdbdzSq/RHqPoFa6a1O6atIE3LtHVHhxxgxZ1QQGPUeEIke53nqmbUKpIvU4iLjpf80cJQ==", "user"=>{"first_name"=>"Andrea", "last_name"=>"Weiner", "email"=>"andi@weiner.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'andi@weiner.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "andi@weiner.com"], ["encrypted_password", "$2a$10$0aTey.CijyTj.yei9nTIVOrCNNCr/RZ0vZ5Zz4Yg6LzzPPEc4h0Cy"], ["first_name", "Andrea"], ["last_name", "Weiner"], ["created_at", "2015-05-23 19:29:12.224070"], ["updated_at", "2015-05-23 19:29:12.224070"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-05-23 19:29:12.227441"], ["current_sign_in_at", "2015-05-23 19:29:12.227441"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-05-23 19:29:12.228411"], ["id", 3]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 86ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 15:29:12 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.2ms)
