@@ -1,26 +1,39 @@
-<p>
-  <strong>Image:</strong>
-  <%= image_tag(@restaurant.image) %>
-</p>
-<p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
-</p>
+<div class="row">
+  <div class="col-md-3 center">
+    <p>
+      <%= image_tag(@restaurant.image) %>
+    </p>
+    <p>
+      <strong>Name:</strong>
+      <%= @restaurant.name %>
+    </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @restaurant.address %>
-</p>
+    <p>
+      <strong>Address:</strong>
+      <%= @restaurant.address %>
+    </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @restaurant.phone %>
-</p>
+    <p>
+      <strong>Phone:</strong>
+      <%= @restaurant.phone %>
+    </p>
 
-<p>
-  <strong>Website:</strong>
-  <%= @restaurant.website %>
-</p>
-<%= link_to 'Write A Review', new_restaurant_review_path(@restaurant),  class: "btn btn-primary" %><br/>
-<%= link_to 'Edit', edit_restaurant_path(@restaurant),  class: "btn btn-link" %> |
-<%= link_to 'Back', restaurants_path,  class: "btn btn-link" %>
+    <p>
+      <strong>Website:</strong>
+      <%= link_to("view website", @restaurant.website, class: "btn btn-link") %>
+    </p>
+    <%= link_to 'Write A Review', new_restaurant_review_path(@restaurant),  class: "btn btn-primary" %><br/>
+    <%= link_to 'Edit', edit_restaurant_path(@restaurant),  class: "btn btn-link" %> |
+    <%= link_to 'Back', restaurants_path,  class: "btn btn-link" %>
+  </div>
+  <div class="col-md-9">
+    <% if @reviews.blank? %>
+      <h2> Be super awesome, and write the first review ! </h2>
+    <% else %>
+      <% @reviews.each do |r| %>
+        <%= r.rating %>
+        <%= r.comment %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
