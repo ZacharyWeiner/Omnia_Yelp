@@ -31,7 +31,12 @@
   <div class="form-group">
     <%= f.label :image %><br>
     <%= f.file_field :image, class: "form-control" %>
+    <label>
+      <%= f.check_box :remove_image %>
+      Remove Image
+    </label>
   </div>
+  
   <div class="form-group actions">
     <%= f.submit class: "btn btn-primary" %>
   </div>

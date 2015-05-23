@@ -24,8 +24,9 @@ gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 
 gem 'fog'
 
-gem "figaro"
+gem 'figaro'
 
+gem 'mini_magick'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 

@@ -4,18 +4,19 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
+  version :thumb do 
+    process resize_to_fit: [200,200]
+  end
   # Choose what kind of storage to use for this uploader:
-  # storage :file is an instruction to save the file on my local machine 
-  # storage :file
-
   if Rails.env.production?
   # storage :fog is and instruction to save the file on a remote storage 
    storage :fog
   else 
     storage :file
   end
+
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
@@ -31,7 +32,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  # process :scale => [200, 300]
+  #process :scale => [200, 300]
+  #maintain this aspect ratio but scale the image to the current container height 
+  process resize_to_fit: [200, 300]
+  #fill the size of the container completely and crop the image if the aspect:ratio requires 
+  #the scaled image to be larger than the container 
+  #process :resize_to_fill
   #
   # def scale(width, height)
   #   # do something
