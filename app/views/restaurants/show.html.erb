@@ -3,11 +3,12 @@
     <p>
       <%= image_tag(@restaurant.image) %>
     </p>
-    <p>
-      <strong>Name:</strong>
+    <h2>
       <%= @restaurant.name %>
-    </p>
+    </h2>
 
+    <div class="star-rating" data-score= <%= @avg_rating %> ></div>
+    <h5> <%= "#{@reviews.length} reviews"  %> </h5>
     <p>
       <strong>Address:</strong>
       <%= @restaurant.address %>
@@ -30,13 +31,21 @@
     <% if @reviews.blank? %>
       <h2> Be super awesome, and write the first review ! </h2>
     <% else %>
-      <% @reviews.each do |r| %>
-        <div class="star-rating" data-score=<%= r.rating %> ></div>
-        </div>
-        <%= r.comment %>
-      <% end %>
+      <table class="table">
+        <tbody>
+          
+          <% @reviews.each do |r| %>
+            <tr>
+              <td>
+                <div class="star-rating" data-score=<%= r.rating %> ></div>
+                <p><%= h(r.comment).gsub(/\n/, '<br/>').html_safe %></p>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     <% end %>
-  </div>
+    </div>
 </div>
 
 <script type="text/javascript">
