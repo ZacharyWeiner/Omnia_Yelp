@@ -1,5 +1,5 @@
-<div class="container">
-<%= form_for(@restaurant) do |f| %>
+
+<%= form_for(@restaurant, :HTML => {multipart: true}) do |f| %>
   <% if @restaurant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
@@ -28,8 +28,11 @@
     <%= f.label :website %><br>
     <%= f.text_field :website, class: "form-control" %>
   </div>
+  <div class="form-group">
+    <%= f.label :image %><br>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
   <div class="form-group actions">
     <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
-</div>

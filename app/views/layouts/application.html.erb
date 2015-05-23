@@ -9,10 +9,12 @@
 <%= render('layouts/bootstrap') %>
 </head>
 <body>
+<div class="container">
 	<%= render('layouts/navbar') %>
 	<div class="container-fliud">
 		<%= yield %>
 	</div>
 	<%= render('layouts/footer') %>
+</div>
 </body>
 </html>
