@@ -12,6 +12,7 @@ gem 'fog'
 gem 'figaro'
 gem 'mini_magick'
 gem 'devise'
+gem 'searchkick'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor',  group: :production

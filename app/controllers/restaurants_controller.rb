@@ -1,7 +1,15 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!, except: [:index, :show]
+    before_action :authenticate_user!, except: [:search, :index, :show]
     before_action :check_user, only: [:edit, :update, :destroy]
+
+    def search
+      if params[:search].present?
+        @restaurants = Restaurant.search(params[:search])
+      else
+        @restaurants = Restaurant.all
+      end
+    end
   # GET /restaurants
   # GET /restaurants.json
   def index
@@ -76,7 +84,7 @@ class RestaurantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurant_params
-      params.require(:restaurant).permit(:name, :address, :phone, :website, :image)
+      params.require(:restaurant).permit(:name, :address, :phone, :website, :image, :search)
     end
 
     def check_user
