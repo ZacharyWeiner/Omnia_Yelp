@@ -11,9 +11,11 @@
       <th>Address</th>
       <th>Phone</th>
       <th>Website</th>
-      <% if user_signed_in?  && current_user.admin? %>
+      <% if user_signed_in? %>
+        <% if current_user && current_user.admin?%>
       <th colspan="2"></th>
       <% end %>
+      <% end%>
     </tr>
   </thead>
 
@@ -34,7 +36,7 @@
 </table>
 
 <br>
-<% if user_signed_in?  && current_user.admin? %>
+<% if user_signed_in?  && (current_user && current_user.admin?) %>
 <%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-primary" %>
 <% end %>
 <div class="clear" />
